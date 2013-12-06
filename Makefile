@@ -1,6 +1,6 @@
-CFILES  = program.c
+CFILES  = aaprogram.c
 OBJS    = object.o
-EXEC    = program
+EXEC    = app
 DBFILE  = debugfile
 
 CC      = gcc
@@ -11,7 +11,7 @@ GFLAGS  = `pkg-config --cflags --libs gtk+-2.0`
 
 
 $(EXEC): $(CFILES)
-	$(CC) -o $(EXEC) $(CFILES) $(CFLAGS) $(GFLAGS)
+	$(CC) $(CFLAGS) -o $(EXEC) $(CFILES)  
 
 
 .PHONY: r
@@ -21,7 +21,7 @@ r: $(EXEC)
 
 .PHONY: d
 d: $(CFILES)
-	$(CC) $(DFLAGS) -o $(DBFILE) $(CFILES) $(GFLAGS)
+	$(CC) $(DFLAGS) -o $(DBFILE) $(CFILES) 
 	gdb $(DBFILE)
 
 
