@@ -5,8 +5,8 @@ DBFILE  = debugfile
 
 CC      = gcc
 
-CFLAGS  = -Wall
-DFLAGS  = -Wall -ggdb
+CFLAGS  = -Wall -g --std=gnu11 -O3
+DFLAGS  = -Wall -ggdb -O0
 GFLAGS  = `pkg-config --cflags --libs gtk+-2.0`
 
 
