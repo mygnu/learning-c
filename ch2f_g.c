@@ -1,7 +1,7 @@
 /* If the three sides of a triangle are entered through the */
 /* keyboard, write a program to check whether the triangle is */
-/* valid or not. The triangle is valid if the sum of two sides is */
-/* greater than the largest of the three sides. */
+/* isosceles, equilateral, scalene or right angled triangle. */
+
 
 
 
@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
     int a,b,c,big,small,medium;
-	a = b = c = big = small = 0;
+	a = b = c = big = small = medium = 0;
 	
 	printf ("Ener the sides of a tirangle a,b and c: ");
 	scanf("%d %d %d",&a,&b,&c);
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if ((small+medium)>big)
 		{
 			if((big*big) == (medium*medium)+(small*small))
-				printf ("This is a valid right triangle.\n");
+				printf ("This is a valid right angle triangle.\n");
 			else
 				printf ("This is a valid triangle.\n");
 				
