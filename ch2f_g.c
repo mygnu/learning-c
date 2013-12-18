@@ -5,7 +5,7 @@
 
 
 
-#include "header.h"
+#include "header.h" //gets most common header files from my own header
  
 int main(int argc, char *argv[])
 {
