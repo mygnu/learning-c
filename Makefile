@@ -6,8 +6,8 @@ AFILE   = assembly.asm
 
 CC      = gcc
 
-CFLAGS  = -Wall -Wno-unused-variable -Wno-unused-result -g -std=gnu11 -O3
-DFLAGS  = -Wall -ggdb -std=gnu11 -O0
+CFLAGS  = -Wall -Wno-unused-variable -Wno-unused-result -g -std=gnu99 -O3
+DFLAGS  = -Wall -ggdb -std=gnu99 -O0
 GFLAGS  = `pkg-config --cflags --libs gtk+-2.0`
 AFLAGS  = -O2 -S -c --save-temps -masm=intel
 
