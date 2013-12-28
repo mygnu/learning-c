@@ -4,3 +4,5 @@
 #include <float.h>
 #include <unistd.h>
 
+double power(int *x, int *y);
+

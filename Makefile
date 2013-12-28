@@ -7,6 +7,7 @@ AFILE   = assembly.asm
 CC      = gcc
 
 CFLAGS  = -Wall -Wno-unused-variable -Wno-unused-result -g -std=gnu99 -O3
+FFLAGS	= -Wall -std=gnu99
 DFLAGS  = -Wall -ggdb -std=gnu99 -O0
 GFLAGS  = `pkg-config --cflags --libs gtk+-2.0`
 AFLAGS  = -O2 -S -c --save-temps -masm=intel
@@ -29,6 +30,16 @@ d: $(CFILES)
 a:	$(CFILES)
 	$(CC) $(AFLAGS) -o $(AFILE) $(CFILES)
 
+
+check-syntax:
+	gcc $(FFLAGS) $(GFLAGS) -o nul -S ${CHK_SOURCES}
+
 .PHONY: clean
 clean:
 	rm -f $(EXEC) $(DBFILE) *.o *~ *.asm *.s *.out
+
+
+
+
+
+
