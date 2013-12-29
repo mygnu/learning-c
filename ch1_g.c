@@ -3,29 +3,36 @@
 /* (Hint: Use the modulus operator ‘%’) */
 
 
-#include <stdio.h>
+#include "header.h"
+void total_of_digits(int n);
 
 int main(int argc, char *argv[])
 {
-	int num,d1,d2,d3,d4,d5;
-	
+	int num;
 	printf ("Please entre a five digit Number: ");
 
 	scanf("%d", &num);
 
+	total_of_digits(num);
+	
+	return 0;
+}
 
-	d5 = num % 10;
-	num = num / 10;
-	d4 = num % 10;
-	num = num / 10;
-	d3 = num % 10;
-	num = num /10;
-	d2 = num % 10;
-	num = num / 10;
-	d1 = num % 10;
+void total_of_digits(int n)
+{
+	int d1,d2,d3,d4,d5;
+	d5 = n % 10;
+	n = n / 10;
+	d4 = n % 10;
+	n = n / 10;
+	d3 = n % 10;
+	n = n /10;
+	d2 = n % 10;
+	n = n / 10;
+	d1 = n % 10;
+
 	printf("you have entered:%d%d%d%d%d ", d1,d2,d3,d4,d5);
-
+	
 	printf (" total of all digits is: %d \n ",d1+d2+d3+d4+d5);
 
-	return 0;
 }

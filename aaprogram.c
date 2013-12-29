@@ -1,10 +1,25 @@
+/* introduction to pointers */
+
 #include "header.h"
+int factorial(int x);
+
 
 int
 main(int argc, char *argv[])
 {
-	int x=33, y=6;
-	double u = 888838.8;
-	printf("%f" ,u); 
-    return 0;
+	int a =5 ,fact;
+	fact= factorial(a);
+	printf("factorial of %d is %d\n", a, fact);
+	
+	return 0;
+
+
+}
+
+int factorial(int x)
+{
+	int f = 1, i;
+	for(i = x; i >=1; i--)
+		f=f*i;
+	return(f);
 }
