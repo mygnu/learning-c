@@ -11,13 +11,23 @@ double power(int *x, int *y)
 }
 
 
-/* int factorial(int x) // normal function */
-/* { */
-/* 	int f = 1, i; */
-/* 	for(i = x; i >=1; i--) */
-/* 		f=f*i; */
-/* 	return(f); */
-/* } */
+void fabonacci(int n)
+{
+	unsigned long n1 = 0;
+	unsigned long n2 = 1;
+	printf("%lu, %lu", n1,n2);
+	
+	
+	for (int i = 2; i < n; i++)
+		{
+			unsigned long n3 = n1 + n2;
+			printf(", %lu",n3);
+			n1 = n2;
+			n2 = n3;
+		}
+	printf("\n");
+}
+
 
 int factorial(int x) // recursive function
 {
@@ -35,3 +45,31 @@ unsigned int sumofn( unsigned int n)
 		return 0;
 	return n%10 + sumofn(n/10);
 }
+
+
+
+void getfrmkbd( int *k)
+{
+	printf("Please enter a number: ");
+	scanf("%d", &(*k));
+}
+
+void primefactors(int x)
+	{
+		int N = x;
+		for (int i = 2; i < N; i++)
+			{
+				if (x%i==0)
+					{
+						printf("%d ", i);
+						x = x/i;
+						i=1;
+					}
+			}
+		printf("\n");
+	}
+
+
+
+
+
