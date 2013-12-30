@@ -1,4 +1,4 @@
-CFILES  = aaprogram.c
+CFILES  = aaprogram.c myfun.c
 OBJS    = object.o
 EXEC    = app
 DBFILE  = debugfile

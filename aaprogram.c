@@ -1,25 +1,24 @@
-/* introduction to pointers */
+/* recursive functions */
 
 #include "header.h"
-int factorial(int x);
+#include <string.h>
 
 
+
+#endif // m
 int
 main(int argc, char *argv[])
 {
-	int a =5 ,fact;
-	fact= factorial(a);
-	printf("factorial of %d is %d\n", a, fact);
+	unsigned int a =5349999;
+	/* fact= factorial(a); */
+	/* printf("factorial of %d is %d\n", a, fact); */
+	/* fact= rec(a); */
+	/* printf("factorial of %d is %d\n", a, fact); */
+	printf("sum of all the digits in %d is %d\n", a, sumofn(a));
 	
 	return 0;
-
-
 }
 
-int factorial(int x)
-{
-	int f = 1, i;
-	for(i = x; i >=1; i--)
-		f=f*i;
-	return(f);
-}
+
+
+
