@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 //returns the y to the power x
-double power(int *x, int *y);
+double power(int x, int y);
 
 //returens factorial of x
 int factorial(int x); // normal function

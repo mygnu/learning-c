@@ -1,16 +1,17 @@
 #include "header.h"
 
-double power(int *x, int *y)
+/* take two ints raises second to the power of first */
+double power(int x, int y)
 {
-  double res =0;
-  for (int i = 1; i < *y; i++)
+  double res =1;
+  for (int i = 0; i < y; i++)
 	{
-	  res = res * (*x);
+	  res = res * (x);
 	}
   return (res);
 }
 
-
+/* takes an int and pirnts fabonacci series up to that */
 void fabonacci(int n)
 {
   unsigned long n1 = 0;
@@ -28,7 +29,8 @@ void fabonacci(int n)
   printf("\n");
 }
 
-
+/* takes an int and calculates the factorial value of that int */
+/* returns int */
 int factorial(int x) // recursive function
 {
   int f;
@@ -39,6 +41,8 @@ int factorial(int x) // recursive function
   return (f);
 }
 
+/* takes an unsigned int and calculates the sum of all the digits */
+/* returns unsigned int */
 unsigned int sumofn( unsigned int n)
 {
   if(n == 0)
@@ -47,13 +51,15 @@ unsigned int sumofn( unsigned int n)
 }
 
 
-
+/* prints the pormpt to take an pointer to integer and from the keyboard and
+ assignns the value at the address of int */
 void getfrmkbd( int *k)
 {
   printf("Please enter a number: ");
   scanf("%d", &(*k));
 }
 
+/* takes an int and prints pirme factors of that int */
 void primefactors(int x)
 {
   int N = x;
