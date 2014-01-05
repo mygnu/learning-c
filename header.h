@@ -23,3 +23,6 @@ void getfrmkbd( int *k);
 
 // prints prime factors of the int x
 void primefactors(int x);
+
+// takes an int and prints sum of all digits
+int sumdig ( int num );
