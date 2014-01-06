@@ -5,12 +5,7 @@
 int 
 main(int argc, char *argv[])
 {
-  int a[2][4] =
-    {
-      {10, 15, 13, 13},
-      {98, 67, 80, 76}
-    };
-  
+  int a[4] = { 10, 15, 13, 13};
   int *p, *o;
   p=a;
   o=p;
@@ -19,8 +14,8 @@ main(int argc, char *argv[])
     {
       printf("%d th array adderss= %p, value = %d\n",i, &a[i], a[i]);
       printf("%d th array adderss= %p, value = %d\n",i, (p+i), *(p+i));
-      printf("%d th array adderss= %p, value = %d\n\n",i, (o), *(o++));
-      //o++;
+      printf("%d th array adderss= %p, value = %d\n\n",i, (o), *(o));
+      o++;
     }
 
 

@@ -76,21 +76,21 @@ void primefactors(int x)
 }
 
 /* takes an int and prints sum of all its digits */
-int sumdig ( int num )
-{
-  static int sum ;
-  int a, b ;
+/* int sumdig ( int num ) */
+/* { */
+/*   static int sum ; */
+/*   int a, b ; */
 
-  a = num % 10 ;
-  b = ( num - a ) / 10 ;
+/*   a = num % 10 ; */
+/*   b = ( num - a ) / 10 ; */
 
-  sum = sum + a ;
+/*   sum = sum + a ; */
 
-  if ( b != 0 )
-    sumdig ( b ); 
-    else
-    return ( sum );
-}
+/*   if ( b != 0 ) */
+/*     sumdig ( b );  */
+/*     else */
+/*     return ( sum ); */
+/* } */
 
 
 
