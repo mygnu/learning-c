@@ -2,102 +2,61 @@
 //  getfrmkbd(&x);
 #include "header.h"
 #include <curl/curl.h>
+
+void display(int (*p)[2], int row, int column );
+void doublearr(int (*p)[2], int row, int column );
+
 int 
 main(int argc, char *argv[])
 {
-  int a[2][4] =    // a[i] yields the addres of the ith one dimentional array of four integers
-    {
-      {10, 15, 13, 13},
-      {98, 67, 80, 76}
-    };
+  int s[4][2] = {
+    { 1234, 56 },
+    { 1212, 33 },
+    { 1434, 80 },
+    { 1312, 78 }
+  } ;
+  // int ( *p )[2] = s ;
   
-  printf(" two dimentional array, or two arrays of four elements each\n\
-int a[2][4] =\n\
-    {\n\
-      {10, 15, 13, 13},\n\
-      {98, 67, 80, 76}\n\
-    };\n");
-  int (*ptr)[4] = a;
-  
-  printf("(a) is a pointer to one dimentional array of four integers\n");
-  printf("a = %p is an pointer to one D array of four itegers\
-\nit is defined as int (*ptr)[4];\n",a);
-  
-  printf("printing (ptr) gives us %d\n", ptr);
-  printf("printing (ptr+1) gives us %d\n", ptr+1);
-  
-  printf("(*ptr) is %d, wich is pointer to the begenning of first one D array\
- \n", *ptr);
-  printf("printing (*ptr+1) gives us %d\n", *ptr+1);
-  printf("printing *(a[0]+1) gives us %d\n", *(a[0]+1));
-  printf("printing *(*(a+0)+1) gives us %d\n", *(*(a+0)+1));
-
- 
+  display(s,4,2);
+  doublearr(s,4,2);
+  display(s,4,2);
+  /* for ( i = 0 ; i <= 3 ; i++ ) */
+  /*   { */
+  /*     p = &s[i] ; */
+  /*     // pint = p; */
+  /*     for ( j = 0 ; j <= 1 ; j++ ) */
+  /* 	printf ( "%d ", *( *p + j ) ) ; */
+  /*     printf ( "\n" ) ; */
+      
+  /*   } */
+      
   return 0;
+    
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void display(int (*p)[2], int row, int column )
+  {
+    for (int i = 0; i < row; i++)
+      {
+	for (int j = 0; j < column; j++)
+	  {
+	    printf("%d ",p[i][j]);
+	  }
+	printf("\n");
+	
+
+      }
+
+  }
+
+void doublearr(int (*p)[2], int row, int column )
+  {
+    for (int i = 0; i < row; i++)
+      {
+	for (int j = 0; j < column; j++)
+	  {
+	    p[i][j] = p[i][j] * 2;
+	  }
+      }
+
+  }

@@ -7,13 +7,13 @@ AFILE   = assembly.asm
 CC      = gcc
 
 ## standard Flags
-CFLAGS  = -Wall -Wno-unused-variable -Wno-unused-result -g -std=gnu99 -O3
+CFLAGS  = -Wall -Wno-unused-variable -Wno-unused-result -g -std=gnu11 -O3
 
 ## flags for Flymake
-FFLAGS	= -Wall -std=gnu99
+FFLAGS	= -Wall -std=gnu11
 
 ## debuging flags
-DFLAGS  = -Wall -ggdb -std=gnu99 -O0
+DFLAGS  = -Wall -ggdb -std=gnu11 -O0
 
 ## gtk+ library additions
 GFLAGS  = `pkg-config --cflags --libs gtk+-2.0`
