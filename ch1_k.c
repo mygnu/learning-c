@@ -15,19 +15,21 @@ int main(int argc, char *argv[])
 	printf("Please enter the amount to withdraw: ");
 	scanf("%d",&wid);
 
-	hun = wid/100;
+	hun = wid/100;		/* calculate how many hundreds we need */
 
-	wid = wid % 100;
+	wid = wid % 100;	/* keep the remainder of 100 */
 
-	fif = wid /50;
+	fif = wid /50;		/* calculate how many 50s we need */
 
-	wid = wid % 50;
+	wid = wid % 50;		/* keep the remainder of 50 */
 
-	ten = wid / 10;
+	ten = wid / 10;		/* calculate how many 10s we need */
 
-	printf ("To withdraw %d you will get %d 100s, %d 50s and %d 10s \n",wid,hun,fif,ten);
+	printf ("To withdraw %d you will get %d 100s, %d 50s and %d 10s \n",
+		wid,hun,fif,ten); /* print out the values */
 	
 	
 	return 0;
 }
  
+

@@ -9,23 +9,24 @@
 
 int main(int argc, char *argv[])
 {
-	int len,wid,area,per;
+    int len,wid,area,per;
 
-	printf("Please the legth and width of a rectangle: ");
+    printf("Please the legth and width of a rectangle: ");
 
-	scanf("%d %d", &len,&wid);
+    scanf("%d %d", &len,&wid);
 
-	area = len * wid;
-	per = len * 2 + wid * 2;
-	
-	if (area > per)
-		{
-			printf ("The area %d of the rectangle is greater than the prerimeter %d \n",area, per);
-		}
-	else
-		printf ("The area %d of the rectangle is smaller than the prerimeter %d \n",area, per);
-	
-	
-	return 0;
+    area = len * wid;		/* simple enough logic */
+    per = len * 2 + wid * 2;
+
+    if (area > per)
+    {
+        printf ("The area %d of the rectangle is greater\
+ than the prerimeter %d \n",area, per);
+    }
+    else
+        printf ("The area %d of the rectangle is smaller\
+ than the prerimeter %d \n",area, per);
+
+
+    return 0;
 }
-

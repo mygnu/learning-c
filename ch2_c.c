@@ -6,17 +6,16 @@
 
 int main(int argc, char *argv[])
 {
-	int year;
-	printf ("pleae Enter the year:");
-	scanf("%d", &year);
-	if ((year % 4)==0)
-		{
-			printf ("Its a Leap Year \n");
-		}
-	else
-		printf ("Its not a Leap Year\n");
+    int year;
+    printf ("pleae Enter the year:");
+    scanf("%d", &year);
+    if ((year % 4)==0)		/* check if divisible by 4 */
+    {
+        printf ("Its a Leap Year \n");
+    }
+    else
+        printf ("Its not a Leap Year\n");
 
 
-	return 0;
+    return 0;
 }
- 

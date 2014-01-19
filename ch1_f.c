@@ -6,19 +6,19 @@
 
 int main(int argc, char *argv[])
 {
-	int C, D, H;
-	
-	printf ("Please entre two numbers C and D\n");
+    int C, D, H;
 
-	scanf("%d %d", &C, &D);
-	printf( "C= %d, D = %d\n", C, D);
+    printf ("Please entre two numbers C and D\n");
 
-	H = C; // Place holder
-	C = D;
-	D = H;
-	
-	printf( "C= %d, D = %d\n", C, D);
-	
+    scanf("%d %d", &C, &D);
+    printf( "C= %d, D = %d\n", C, D);
+
+    H = C; // Place holder
+    C = D; /* switching the values */
+    D = H;
+
+    printf( "C= %d, D = %d\n", C, D);
+
 
 
     return 0;

@@ -7,27 +7,28 @@
 
 int main(int argc, char *argv[])
 {
-	int Ram,Shyam,Ajay;
+    int Ram,Shyam,Ajay;
 
-	printf("Please enter the age of Ram, Shyam and Ajay: ");
+    printf("Please enter the age of Ram, Shyam and Ajay: ");
 
-	scanf("%d%d%d", &Ram,&Shyam,&Ajay);
+    scanf("%d%d%d", &Ram,&Shyam,&Ajay);
 
-	if(Ram < Shyam && Ram < Ajay)
-		{
-			printf("Ram is the youngest.\n");
-		}
-	else if(Shyam < Ram && Shyam < Ajay)
-		{
-			printf("Shyam is the youngest.\n");
-		}
-	else if (Ajay < Ram && Ajay < Shyam)
-		{
-			printf ("Ajay is the youngest.\n");
-		}
-	
+/* determine who is youngest */
 
-	
-	return 0;
+    if(Ram < Shyam && Ram < Ajay)
+    {
+        printf("Ram is the youngest.\n");
+    }
+    else if(Shyam < Ram && Shyam < Ajay)
+    {
+        printf("Shyam is the youngest.\n");
+    }
+    else if (Ajay < Ram && Ajay < Shyam)
+    {
+        printf ("Ajay is the youngest.\n");
+    }
+
+
+
+    return 0;
 }
-

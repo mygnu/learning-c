@@ -9,17 +9,17 @@
 
 int main(int argc, char *argv[])
 {
-	float length, width, radius, area, areac, circumference;
+    float length, width, radius, area, areac, circumference;
 
-	printf ("Please entre lenth, width of a rectongle and radius of o circle:\n");
+    printf ("Please entre lenth, width of a rectongle and radius of o circle:\n");
 
-	scanf("%f %f %f", &length, &width, &radius);
+    scanf("%f %f %f", &length, &width, &radius); /* reads the values to variables */
 
-	area = length * width;
+    area = length * width;
 
-    areac = M_PI * (radius * radius);
+    areac = M_PI * (radius * radius); /* apply the formula */
 
-	circumference = M_PI * radius * 2;
+    circumference = M_PI * radius * 2;
 
     printf("Rectangle area %.2f, circle area %.2f circumference %.2f\n", area, areac, circumference);
 

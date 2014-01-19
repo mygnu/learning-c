@@ -8,13 +8,12 @@
 
 int main(int argc, char *argv[])
 {
-	float sp,pr,cp = 0;
-	printf ("pleas enter the selling price and porfit earned:");
-	scanf("%f %f", &sp, &pr);
+    float sp,pr,cp = 0;
+    printf ("pleas enter the selling price and porfit earned:");
+    scanf("%f %f", &sp, &pr);
 
-	cp = (sp/15) - (pr/15);
+    cp = (sp/15) - (pr/15); 	/* simple math */
 
-	printf ("cost price for one item is %.2f\n",cp);
-	return 0;
+    printf ("cost price for one item is %.2f\n",cp);
+    return 0;
 }
- 

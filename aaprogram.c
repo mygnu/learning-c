@@ -1,31 +1,31 @@
 /* aaprogram.c --- test file for all programs in c
- * 
+ *
  * Filename: aaprogram.c
  * Description: Test file for all programms
  * Author: mygnu
- * Maintainer: 
+ * Maintainer:
  * Created: Fri Jan 17 12:31:19 2014 (+1030)
  * Version: 0.01
  * Package-Requires: (Nil)
- * Last-Updated: Fri Jan 17 21:46:27 2014 (+1030)
+ * Last-Updated: Sun Jan 19 12:44:49 2014 (+1030)
  *           By: mygnu
- *     Update #: 54
- * 
+ *     Update #: 55
+ *
  */
 
-/* Commentary: 
+/* Commentary:
  * Write a program that replaces two or more consecutive blanks
  * in a string by a single blank. For example, if the input is
  * Grim return   to the   planet  of        apes!!
  * the output should be
  * Grim return to the planet of apes!!
- * 
- * 
+ *
+ *
  */
 
 /* Change Log:
- * 
- * 
+ *
+ *
  */
 
 
@@ -38,18 +38,17 @@
 
 void  removeXtraSpaces(char str[], char nstr[]);
 
-int 
+int
 main(int argc, char *argv[])
 {
     char mystr[50] = {"The         brown     fox."};
     //gets(mystr);
     char result[50];// = "______________";
     printf("%s \n", mystr);
-  
     removeXtraSpaces(mystr, result);
-    
+
     printf("%s\n", result);
-  
+
 }
 char myarr[3][10] =
 {
@@ -60,35 +59,25 @@ char myarr[3][10] =
 void  removeXtraSpaces(char str[], char nstr[])
 {
     int flag = NONSPACE;
-  
+
     while (*str != '\0')
     {
-	if(*str != ' ')
-	{
-	    flag = NONSPACE;
-	    *nstr = *str;
-	    nstr++;
-	}
-	else if (*str == ' ' && flag == NONSPACE)
-	{
-	    flag = SPACE;
-	    *nstr = ' ';
-	    nstr++;
-	}
-      
-	str++;
+        if(*str != ' ')
+        {
+            flag = NONSPACE;
+            *nstr = *str;
+            nstr++;
+        }
+        else if (*str == ' ' && flag == NONSPACE)
+        {
+            flag = SPACE;
+            *nstr = ' ';
+            nstr++;
+        }
+
+        str++;
     }
-  
+
 }
 
 /* aaprogram.c ends here */
-
-
-
-
-
-
-
-
-
-

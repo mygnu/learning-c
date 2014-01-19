@@ -9,20 +9,19 @@
 
 int main(int argc, char *argv[])
 {
-	int a,b,c;
+    int a,b,c;
 
-	printf("Please three angles of a triangle: ");
+    printf("Please three angles of a triangle: ");
 
-	scanf("%d%d%d", &a,&b,&c);
+    scanf("%d%d%d", &a,&b,&c);
 
-	if ((a+b+c)==180)
-		{
-			printf ("The Triangle is Valid\n");
-		}
-	else
-		{
-			printf ("The Triangle is InValid\n");
-	}
-	return 0;
+    if ((a+b+c)==180)		/* fair enough logic */
+    {
+        printf ("The Triangle is Valid\n");
+    }
+    else
+    {
+        printf ("The Triangle is InValid\n");
+    }
+    return 0;
 }
-

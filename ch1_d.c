@@ -6,16 +6,13 @@
 
 int main(int argc, char *argv[])
 {
-	float dc, df;
-	dc = df = 0;
-	printf("enter a digree fahrenheit tem unit: ");
-	scanf("%f",&df);
+    float dc, df;
+    dc = df = 0;
+    printf("enter a digree fahrenheit tem unit: ");
+    scanf("%f",&df);
 
-	dc = (df - 32) * 5.0/9;
+    dc = (df - 32) * 5.0/9;	/* Apply the formula */
 
-	printf("%.2f Fahrenheit is %0.2f celcious \n", df,dc);
-	return 0;
+    printf("%.2f Fahrenheit is %0.2f celcious \n", df,dc);
+    return 0;
 }
-
-
-

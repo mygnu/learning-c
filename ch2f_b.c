@@ -18,25 +18,25 @@
 
 
 #include "header.h"
- 
+
 int main(int argc, char *argv[])
 {
     char c;
-	printf("Please enter a character/symbol/number: ");
-	scanf("%c", &c);
+    printf("Please enter a character/symbol/number: ");
+    scanf("%c", &c);
 
-	
-	if(c >= 65 && c <= 90)
-		printf ("You have entered a Capital Letter");
-	else if(c >= 97 && c <= 122)
-		printf ("You have entered a small Letter");
-	else if(c >= 48 && c <= 57)
-		printf ("You have entered a Number");
-	else if((c >= 0 && c <= 47) || (c >= 58 && c <= 64))
-		printf ("You have entered a Special Symbol");
-	else if((c >= 91 && c <= 96) || (c >= 123 && c <= 127))
-		printf ("You have entered a Special Symbol");
-	printf(" (%c)\n",c);
-	return 0;
+    /* checking according to the ASCII values of chars */
+    
+    if(c >= 65 && c <= 90)
+        printf ("You have entered a Capital Letter");
+    else if(c >= 97 && c <= 122)
+        printf ("You have entered a small Letter");
+    else if(c >= 48 && c <= 57)
+        printf ("You have entered a Number");
+    else if((c >= 0 && c <= 47) || (c >= 58 && c <= 64))
+        printf ("You have entered a Special Symbol");
+    else if((c >= 91 && c <= 96) || (c >= 123 && c <= 127))
+        printf ("You have entered a Special Symbol");
+    printf(" (%c)\n",c);
+    return 0;
 }
-

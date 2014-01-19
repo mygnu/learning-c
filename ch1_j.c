@@ -10,28 +10,27 @@
 int main(int argc, char *argv[])
 {
 
-	int tp,tm,lm,im,tw,tl,iw,lw =0;
+    int tp,tm,lm,im,tw,tl,iw,lw =0;
+    /* simple math applied here */
+    tp = 80000;
+    tm = tp*52/100; 		/* total male calculation */
+    lm = tp*35/100;		/* literate males */
+    im = tm - lm;		/* illiterate males */
 
-	tp = 80000;
-	tm = tp*52/100;
-	lm = tp*35/100;
-	im = tm - lm;
+    tw = tp - tm;
+    tl = tp * 48/100;
+    iw = tw - (tl - lm);
+    lw = tl - iw;
 
-	tw = tp - tm;
-	tl = tp * 48/100;
-	iw = tw - (tl - lm);
-	lw = tl - iw;
-	
-	printf ("total populatin %d\n",tp);
-	printf ("total literate %d\n",tl);
-	printf ("total men %d\n",tm);
-	printf ("Literate men %d\n",lm);
-	printf ("illitrate men %d\n",im);
-	printf ("total women %d\n",tw);
-	printf ("litrate women %d\n",lw);
-	printf ("illiterate women %d\n",iw);
-	
-	
-	return 0;
+    printf ("total populatin %d\n",tp);
+    printf ("total literate %d\n",tl);
+    printf ("total men %d\n",tm);
+    printf ("Literate men %d\n",lm);
+    printf ("illitrate men %d\n",im);
+    printf ("total women %d\n",tw);
+    printf ("litrate women %d\n",lw);
+    printf ("illiterate women %d\n",iw);
+
+
+    return 0;
 }
- 
