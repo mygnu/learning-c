@@ -6,18 +6,17 @@
 
 int main()
 {
-	double res;
-	int n1,n2,i;
-	printf("Please enter two numbers as base and power: ");
-	scanf("%d %d",&n1,&n2);
-	res = 1;
-	
-	for(i=1;i<=n2;i++)
-		{
-			res=res*n1;
-		}
+    double res;
+    int n,p;
+    printf("Please enter two numbers as base and power: ");
+    scanf("%d %d",&n,&p);
+    res = 1;
 
-	printf("%.0f\n",res);
-	return 0;
+    for(int i=1;i<=p;i++)
+    {
+        res=res*p;
+    }
+
+    printf("%.0f\n",res);
+    return 0;
 }
-

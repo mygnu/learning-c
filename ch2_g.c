@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     scanf("%d%d%d", &a,&b,&c);
 
-    if ((a+b+c)==180)		/* fair enough logic */
+    if ((a+b+c)==180)           /* fair enough logic */
     {
         printf ("The Triangle is Valid\n");
     }

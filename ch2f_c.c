@@ -18,50 +18,49 @@
 
 
 #include "header.h"
- 
+
 int main(int argc, char *argv[])
 {
     int age,health,city,male,check,premium,pa;
-	health = male = city = age = check = 0;
-	
-	printf ("Your age and sex type 1 for male and 0 for female: ");
-	scanf("%d %d",&age,&male);
+    health = male = city = age = check = 0;
 
-	printf ("\nWhere do you live type 1 for City or 0 for willage: ");
-	scanf("%d",&city);
-	
-	printf ("\nPlease ener your health conditino, 0 for poor 1 for great: ");
-	scanf("%d",&health);
+    printf ("Your age and sex type 1 for male and 0 for female: ");
+    scanf("%d %d",&age,&male);
 
-	age = (age >= 25) && (age <= 35);
-	
-	if (age && health && male && city) 
-		{
-			premium = 4;
-			pa = 200000;
-			check =1;
-		}
-	else if (age && health && !male && city)
-		{
-			premium = 3;
-			pa = 100000;
-			check =1;
-		}
-	else if (age && !health && male && !city)
-		{
-			premium = 6;
-			pa = 10000;
-			check =1;
-		}
-	else
-		printf ("Sorry there is no policy available for you\n");	
+    printf ("\nWhere do you live type 1 for City or 0 for willage: ");
+    scanf("%d",&city);
 
-	if (check)
-		{
-			printf("Your premium is $%d per 1000 and policy limit is $%d\n",premium,pa);
-		}
-	
-   
-	return 0;
+    printf ("\nPlease ener your health conditino, 0 for poor 1 for great: ");
+    scanf("%d",&health);
+
+    age = (age >= 25) && (age <= 35);
+
+    if (age && health && male && city) /* check conditions accordingly */
+    {
+        premium = 4;
+        pa = 200000;
+        check =1;
+    }
+    else if (age && health && !male && city)
+    {
+        premium = 3;
+        pa = 100000;
+        check =1;
+    }
+    else if (age && !health && male && !city)
+    {
+        premium = 6;
+        pa = 10000;
+        check =1;
+    }
+    else
+        printf ("Sorry there is no policy available for you\n");
+
+    if (check)
+    {
+        printf("Your premium is $%d per 1000 and policy limit is $%d\n",premium,pa);
+    }
+
+
+    return 0;
 }
-

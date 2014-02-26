@@ -1,3 +1,4 @@
+
 /* A certain grade of steel is graded according to the following */
 /* conditions: */
 /* (i) Hardness must be greater than 50 */
@@ -16,46 +17,46 @@
 
 
 #include "header.h"
- 
+
 int main(int argc, char *argv[])
 {
     int har,ten,check,grade;
-	float car;
-	har = car = ten = grade = check = 0;
-	
-	printf ("Type tha Hardness, Carbon and Tensile of the Steel: ");
-	scanf("%d %f %d",&har,&car,&ten);
+    float car;
+    har = car = ten = grade = check = 0;
 
-	har = har > 50;
-	car = car < 0.7;
-	ten = ten > 5600;
-	
-	if (har && car && ten) 
-		{
-			grade = 10;
-		}
-	else if (har && car && !ten) 
-		{
-			grade = 9;
-		}
-	else if (!har && car && ten) 
-		{
-			grade = 8;
-		}
-	else if (har && !car && ten) 
-		{
-			grade = 7;
-		}
-	else if ((har+ten+har) == 1) 
-		{
-			grade = 6;
-		}
-	else
-		grade = 5;	
-	
-	printf("This is grade %d steel.\n",grade);
-	
-   
-	return 0;
+    printf ("Type tha Hardness, Carbon and Tensile of the Steel: ");
+    scanf("%d %f %d",&har,&car,&ten);
+
+    har = har > 50; 		/* non zero if condition is true
+				 else false(0)*/
+    car = car < 0.7;
+    ten = ten > 5600;
+
+    if (har && car && ten)
+    {
+        grade = 10;
+    }
+    else if (har && car && !ten)
+    {
+        grade = 9;
+    }
+    else if (!har && car && ten)
+    {
+        grade = 8;
+    }
+    else if (har && !car && ten)
+    {
+        grade = 7;
+    }
+    else if ((har+ten+har) == 1)
+    {
+        grade = 6;
+    }
+    else
+        grade = 5;
+
+    printf("This is grade %d steel.\n",grade);
+
+
+    return 0;
 }
-

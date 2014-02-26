@@ -1,6 +1,6 @@
-CFILES  = aaprogram.c myfun.c mysortingalg.c
+CFILES  = app.c myfun.c mysortingalg.c
 OBJS    = object.o
-EXEC    = app
+EXEC    = exec
 DBFILE  = debugfile
 AFILE   = assembly.asm
 

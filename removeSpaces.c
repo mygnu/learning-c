@@ -7,9 +7,9 @@
  * Created: Fri Jan 17 12:31:19 2014 (+1030)
  * Version: 0.01
  * Package-Requires: (Nil)
- * Last-Updated: Sun Jan 19 12:44:49 2014 (+1030)
+ * Last-Updated: Thu Jan 23 12:16:15 2014 (+1030)
  *           By: mygnu
- *     Update #: 55
+ *     Update #: 57
  *
  */
 
@@ -41,11 +41,11 @@ void  removeXtraSpaces(char str[], char nstr[]);
 int
 main(int argc, char *argv[])
 {
-    char mystr[50] = {"The         brown     fox."};
-    //gets(mystr);
+    char my_str[50] = {"The         brown     fox."};
+    //gets my_str;
     char result[50];// = "______________";
-    printf("%s \n", mystr);
-    removeXtraSpaces(mystr, result);
+    printf("%s \n", my_str);
+    removeXtraSpaces( my_str, result);
 
     printf("%s\n", result);
 
